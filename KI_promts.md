@@ -1,4 +1,5 @@
-services:
+kannst du bitte bitte so einstellen das die wariablen genommen werden aus .env. und gib mir einleitung für nginx manager hier ist die compose datei
+services: 
 
   mariadb:
     image: mariadb:11
@@ -46,12 +47,12 @@ services:
     image: jc21/nginx-proxy-manager:latest
     restart: always
     ports:
-      - "${HTTP_PORT}:80"
-      - "${NPM_UI_PORT}:81"
-      - "${HTTPS_PORT}:443"
+      - "80:80"
+      - "81:81"     # Web UI
+      - "443:443"
     environment:
       DB_MYSQL_HOST: mariadb
-      DB_MYSQL_PORT: ${MYSQL_PORT}
+      DB_MYSQL_PORT: 3306
       DB_MYSQL_USER: ${MYSQL_USER}
       DB_MYSQL_PASSWORD: ${MYSQL_PASSWORD}
       DB_MYSQL_NAME: ${MYSQL_DATABASE}
@@ -71,3 +72,5 @@ volumes:
 networks:
   internal:
   proxy:
+
+danke=)
