@@ -1,12 +1,12 @@
 # Wordpress Project
 
+by Anton Bogush, Christopher Luft
 
 #### Using ufw(Uncomplicated Firewall)
 
 - port: 443
 - port: 80
-- port: 8085
-- port: 8086
+
 
 #### docker compose files:
 
